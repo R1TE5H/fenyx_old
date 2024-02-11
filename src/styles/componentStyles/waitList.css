@@ -1,0 +1,92 @@
+/* Media for Screen Size */
+/* Phones */
+@media screen and (max-width: 500px) {
+  .wait-list-input {
+    font-size: 14px;
+    width: 60%;
+  }
+  .wait-list-subHeader {
+    font-size: 12px;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 820px) and (min-width: 500px) {
+  .wait-list-input {
+    font-size: 16px;
+  }
+  .wait-list-subHeader {
+    font-size: 14px;
+  }
+}
+
+/* Laptops */
+@media screen and (min-width: 821px) {
+  .wait-list-input {
+    font-size: 20px;
+  }
+  .wait-list-subHeader {
+    font-size: 18px;
+  }
+}
+
+/* Color Scheme */
+@media (prefers-color-scheme: light) {
+  .wait-list-text {
+    color: var(--white);
+  }
+  #wait-list-btn {
+    border: 2px solid var(--white);
+    color: var(--white);
+  }
+  .wait-list-input {
+    background: none;
+    border: 2px solid var(--white);
+    height: clamp(10px, 2vw, 30px);
+    color: var(--white);
+  }
+  ::placeholder {
+    color: var(--white);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .wait-list-text {
+    color: var(--ember);
+  }
+  #wait-list-btn {
+    border: 2px solid var(--ember);
+    color: var(--ember);
+  }
+  .wait-list-input {
+    background: none;
+    border: 2px solid var(--ember);
+    height: clamp(10px, 2vw, 30px);
+    color: var(--ember);
+  }
+  ::placeholder {
+    color: var(--ember);
+  }
+}
+
+.wait-list-text {
+  text-align: center;
+  padding: 0px 10%;
+  margin-bottom: 7%;
+}
+.wait-list-container {
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+#wait-list {
+  width: clamp(100px, 80%, 700px);
+  background: var(--sunset);
+  padding-top: 5%;
+  padding-bottom: 5%;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
+}
+
+.wait-list-input:focus {
+  outline: none;
+}
