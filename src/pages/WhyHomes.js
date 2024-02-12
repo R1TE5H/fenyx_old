@@ -47,7 +47,7 @@ export default function WhyHomes() {
         </div>
         <div className="section">
           <p className="hero gradient-text" style={{ textAlign: "center" }}>
-            n Inflation, Defy Recessions
+            Beat Inflation, Defy Recession
           </p>
           <div className="grid">
             <div className="grid-element">
