@@ -4,6 +4,7 @@ import "../styles/main.css";
 import "../styles/pageStyles/landing.css";
 import "../styles/pageStyles/followUps.css";
 import WaitList from "../components/WaitList";
+import BasicFooter from "../components/BasicFooter";
 
 export default function WhyHomes() {
   return (
@@ -109,6 +110,7 @@ export default function WhyHomes() {
         <div className="section center">
           <WaitList />
         </div>
+        <BasicFooter />
       </div>
     </>
   );

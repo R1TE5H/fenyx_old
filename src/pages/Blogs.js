@@ -4,6 +4,7 @@ import React from "react";
 import "../styles/main.css";
 import "../styles/pageStyles/landing.css";
 import "../styles/pageStyles/followUps.css";
+import BasicFooter from "../components/BasicFooter";
 
 export default function Blogs() {
   return (
@@ -26,6 +27,7 @@ export default function Blogs() {
           <p>Why the Rich invest in Real Estate</p>
           <p>Navigating FENYX</p>
         </div>
+        <BasicFooter />
       </div>
     </>
   );

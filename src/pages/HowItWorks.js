@@ -4,6 +4,7 @@ import WaitList from "./../components/WaitList";
 
 import "../styles/pageStyles/landing.css";
 import "../styles/pageStyles/followUps.css";
+import BasicFooter from "../components/BasicFooter";
 
 export default function HowItWorks() {
   return (
@@ -150,6 +151,7 @@ export default function HowItWorks() {
         <div className="section center">
           <WaitList />
         </div>
+        <BasicFooter />
       </div>
     </>
   );

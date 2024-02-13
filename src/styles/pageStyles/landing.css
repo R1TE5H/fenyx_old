@@ -16,8 +16,14 @@
     display: flex;
     flex-direction: column;
     gap: 5%;
-    align-items: baseline;
+    align-items: center;
     margin-bottom: 10%;
+  }
+  .stat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -39,6 +45,11 @@
     flex-direction: column;
     gap: 5%;
     margin-bottom: 5%;
+  }
+  .stat-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 }
 
@@ -118,4 +129,16 @@
   background: var(--sunset);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.hero-stat {
+  font-size: clamp(60px, 8vw, 120px);
+  background: var(--sunset);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-stat-p {
+  display: flex;
+  flex-direction: column;
 }

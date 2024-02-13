@@ -5,6 +5,7 @@ import "../styles/main.css";
 import "../styles/pageStyles/landing.css";
 import WaitList from "../components/WaitList";
 import LandingBlogs from "../components/LandingBlogs";
+import BasicFooter from "../components/BasicFooter";
 
 export default function Landing() {
   return (
@@ -55,12 +56,24 @@ export default function Landing() {
                 BLOGS
               </Link>
             </div>
-
-            <img
-              src="https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Change to Chart"
-              style={{ width: `clamp(250px, 70%, 275px)` }}
-            />
+            <div>
+              <p style={{ textAlign: "center" }}>Potential 6 Month Returns</p>
+              <div className="stat-container">
+                {" "}
+                <p className="hero-stat-p">
+                  <span className="hero-stat">29%</span>
+                  <span>Real Estate</span>
+                </p>
+                <p className="hero-stat-p">
+                  <span className="hero-stat">10%</span>
+                  <span>S&P 500</span>
+                </p>
+                <p className="hero-stat-p">
+                  <span className="hero-stat">8%</span>
+                  <span>Mutual Funds</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -117,6 +130,7 @@ export default function Landing() {
         <div className="section center">
           <WaitList />
         </div>
+        <BasicFooter />
       </div>
     </>
   );
