@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 //Styles
 import "../styles/main.css";
 import "../styles/pageStyles/landing.css";
-import WaitList from "../components/WaitList";
 import LandingBlogs from "../components/LandingBlogs";
 import BasicFooter from "../components/BasicFooter";
 
@@ -44,13 +43,9 @@ export default function Landing() {
                 </span>
               </p>
               <p>
-                Discover the enduring stability of real estate—an investment
-                fortress in a dynamic landscape. With a low correlation to
-                traditional holdings, properties offer resilience and
-                diversification. Amid market fluctuations, real estate stands as
-                a solid anchor, preserving and amplifying gains. Experience
-                financial security through an investment avenue that aligns
-                seamlessly with our unwavering vision.
+                Experience returns surpassing traditional stocks and mutual
+                funds, and marvel at the unparalleled speed of wealth growth.
+                Join us in redefining the pace of investment returns.
               </p>
               <Link className=" center link gradient-background" to="/blogs">
                 BLOGS
@@ -127,8 +122,19 @@ export default function Landing() {
             </Link>
           </div>
         </div>
-        <div className="section center">
-          <WaitList />
+        <div className="section">
+          <p style={{ marginBottom: "5%", textAlign: "center" }}>
+            <span className="hero gradient-text">Your Future Awaits</span>
+            <br /> <br />
+            <span className="subHeader">
+              Get Started Today and Join the Real Estate Revolution
+            </span>
+          </p>
+          <div className="center btn-container">
+            <Link to="/get-started" className="link gradient-background">
+              Get Started
+            </Link>
+          </div>
         </div>
         <BasicFooter />
       </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import WaitList from "./../components/WaitList";
 
 import "../styles/pageStyles/landing.css";
 import "../styles/pageStyles/followUps.css";
@@ -148,8 +147,19 @@ export default function HowItWorks() {
             </span>
           </p>
         </div>
-        <div className="section center">
-          <WaitList />
+        <div className="section">
+          <p style={{ marginBottom: "5%", textAlign: "center" }}>
+            <span className="hero gradient-text">Your Future Awaits</span>
+            <br /> <br />
+            <span className="subHeader">
+              Get Started Today and Join the Real Estate Revolution
+            </span>
+          </p>
+          <div className="center btn-container">
+            <Link to="/get-started" className="link gradient-background">
+              Get Started
+            </Link>
+          </div>
         </div>
         <BasicFooter />
       </div>

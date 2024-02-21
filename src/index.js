@@ -8,13 +8,11 @@ import BasicNavBar from "./components/BasicNavBar";
 import WhyHomes from "./pages/WhyHomes";
 import HowItWorks from "./pages/HowItWorks";
 import Blogs from "./pages/Blogs";
-import { Toaster } from "react-hot-toast";
 import GetStarted from "./pages/GetStarted";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <Toaster position="top-center" reverseOrder={false} />
     <BasicNavBar />
     <Routes>
       <Route path="/" element={<Landing />} />
