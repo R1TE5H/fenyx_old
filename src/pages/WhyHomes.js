@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "../styles/main.css";
 import "../styles/pageStyles/landing.css";
 import "../styles/pageStyles/followUps.css";
-import WaitList from "../components/WaitList";
 import BasicFooter from "../components/BasicFooter";
 
 export default function WhyHomes() {
