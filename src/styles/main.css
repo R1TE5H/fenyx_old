@@ -82,3 +82,23 @@ input {
   margin-bottom: 5%;
   padding: 0px 10%;
 }
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 330px;
+}
+
+.alert-text {
+  color: red;
+  font-size: x-small;
+}
+
+label {
+  font-size: small;
+}
+input {
+  height: 30px;
+  font-size: medium;
+}

@@ -56,11 +56,3 @@
   height: fit-content;
   text-align: center;
 }
-
-.input {
-  border: 2px solid black;
-}
-
-.input-sm {
-  width: 45%;
-}

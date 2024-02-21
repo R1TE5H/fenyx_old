@@ -10,7 +10,7 @@ export default function Blogs() {
   return (
     <>
       <div className="fadeIn">
-        <div className="header fadeIn">
+        <div className="header">
           <p>
             <span className="hero gradient-text">
               Wealth Unwrapped: Insider Real Estate Tales

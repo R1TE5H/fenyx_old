@@ -1,18 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
+import Joi from "joi";
+import { joiResolver } from "@hookform/resolvers/joi";
+
+import "../styles/pageStyles/followUps.css";
+import "../styles/pageStyles/landing.css";
+import "../styles/main.css";
 
 export default function GetStarted() {
-  const [formData, setFormData] = useState({
-    first_name: "",
-    last_name: "",
-    phone: "",
-    email: "",
-    password: "",
+  const schema = Joi.object({
+    first_name: Joi.string().required().min(3).max(100).label("First Name"),
+    last_name: Joi.string().required().min(3).max(100).label("Last Name"),
+    phone: Joi.string().required().min(10).max(15).label("Phone Number"),
+    email: Joi.string()
+      .email({ tlds: { allow: false } })
+      .required()
+      .label("Email"),
+    password: Joi.string().required().min(8).max(255).label("Password"),
   });
+  const {
+    register,
+    handleSubmit,
+    // To determine if the form is valid use isValid property
+    formState: { errors },
+  } = useForm({ resolver: joiResolver(schema) });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
+  const onSubmit = (data) => console.log(data);
 
   return (
     <>
@@ -26,75 +39,87 @@ export default function GetStarted() {
             flexDirection: "column",
           }}
         >
-          <p className="hero gradient-text" style={{ textAlign: "center" }}>
-            Create an Account
+          <p style={{ textAlign: "center" }}>
+            <span className="hero gradient-text">Create an Account</span>
+            <br /> <br />
+            <span style={{ width: "280px" }}>
+              Create an account and automatically join our wait list.
+            </span>
           </p>
-          <form
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "10px",
-            }}
-          >
-            <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="input-container">
+              <label htmlFor="first_name" className="">
+                First Name
+              </label>
               <input
-                className="input input-sm"
-                id="first-name"
+                {...register("first_name")}
+                id="first_name"
                 type="text"
-                placeholder="First Name"
-                onChange={(e) =>
-                  setFormData({ ...formData, first_name: e.target.value })
-                }
+                className=""
               />
-              <input
-                className="input input-sm"
-                id="last-name"
-                type="text"
-                placeholder="Last Name"
-                onChange={(e) =>
-                  setFormData({ ...formData, last_name: e.target.value })
-                }
-              />
+              {errors.first_name && (
+                <p className="alert-text">{errors.first_name.message}</p>
+              )}
             </div>
-            <input
-              className="input"
-              id="phone"
-              type="tel"
-              placeholder="Phone Number"
-              onChange={(e) =>
-                setFormData({ ...formData, phone: e.target.value })
-              }
-            />
-            <input
-              className="input"
-              id="email"
-              type="email"
-              placeholder="Email"
-              onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
-              }
-            />
-            <input
-              className="input"
-              id="password"
-              type="password"
-              placeholder="Password"
-              onChange={(e) =>
-                setFormData({ ...formData, password: e.target.value })
-              }
-            />
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <button
-                className="gradient-background link"
-                type="submit"
-                onClick={handleSubmit}
-              >
+            <div className="input-container">
+              <label htmlFor="last_name" className="">
+                Last Name
+              </label>
+              <input
+                {...register("last_name")}
+                id="last_name"
+                type="text"
+                className=""
+              />
+              {errors.last_name && (
+                <p className="alert-text">{errors.last_name.message}</p>
+              )}
+            </div>
+            <div className="input-container">
+              <label htmlFor="phone" className="">
+                Phone Number
+              </label>
+              <input
+                {...register("phone")}
+                id="phone"
+                type="tel"
+                className=""
+              />
+              {errors.phone && (
+                <p className="alert-text">{errors.phone.message}</p>
+              )}
+            </div>
+            <div className="input-container">
+              <label htmlFor="email" className="">
+                Email
+              </label>
+              <input
+                {...register("email")}
+                id="email"
+                type="email"
+                className=""
+              />
+              {errors.email && (
+                <p className="alert-text">{errors.email.message}</p>
+              )}
+            </div>
+            <div className="input-container">
+              <label htmlFor="password" className="">
+                Password
+              </label>
+              <input
+                {...register("password")}
+                id="password"
+                type="password"
+                className=""
+                style={{ fontSize: "26px", fontWeight: "bolder" }}
+              />
+              {errors.password && (
+                <p className="alert-text">{errors.password.message}</p>
+              )}
+            </div>
+            <div className="btn-container center">
+              <button className="link gradient-background" type="submit">
                 Submit
               </button>
             </div>
